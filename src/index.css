@@ -1,13 +1,194 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.Main-round{
+  /* background-color: aqua; */
+  height: 80vh;
+  width: 35%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  position: relative;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.Main-round-1{
+  background-color: white;
+  height: 40vh;
+  width: 20%;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0%;
+  right: 30%;
+ 
+  border: 2px;
+}
+.text-1{
+  font-family: 'Prata, sans-serif';
+  font-weight: 400;
+
+}
+.text-2{
+  font-family: 'Prata, sans-serif';
+  font-weight: 400;
+  font-size: 36px;
+  color: #4F4D4D;
+}
+
+.main-btn:hover .main-btn-1{
+  transform: translateX(40%);
+  transition-duration: 1s;
+}
+
+
+
+/*--------------------------------------------  img scrol slider antimation -----------------------  */
+
+
+.photoslider{
+  width: 500%;
+  height: 80vh;
+  /* background-color: aqua; */
+  display: flex;
+  object-fit: cover;
+  
+}
+
+.slider{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  animation: scrol 10s infinite;
+  /* animation-duration: 10s ; */
+}
+
+@keyframes scrol {
+
+  0%{
+    transform: translateX(0%);
+}
+25%{
+    transform: translateX(-100%);
+}
+50%{
+    transform: translateX(-200%);
+}
+75%{
+    transform: translateX(-300%);
+}
+100%{
+    transform: translateX(0%);
+}
+  
+}
+
+
+
+/*---------------------------------  Teacher image style--------------------------------------------- */
+
+.Teacher-img{
+position: relative;
+
+}
+
+.Teacher-img1{
+  position: absolute;
+  left: 18%;
+  bottom: 1%;
+   height: 55vh;
+   width: 30%;
+   /* background-color: aqua; */
+   
+  border-radius: 200px;
+  overflow: hidden;
+
+
+}
+
+/* teacher img hover----------------------------------------------- */
+.img-hover{
+ transition: .5s;
+}
+.inner-img-div:hover .img-hover{
+  transform: scale(1.1);
+}
+
+/* footer img */
+.footer{
+  background-image: url("https://optim.tildacdn.one/tild6333-3430-4530-b435-323266376631/-/format/webp/DSC01781.jpg");
+  /* background-position: center; */
+  
+}
+
+/* respomsive for mobile--------------------------------------  */
+
+.sidebar-popup{
+  animation: toLeft .5s;
+}
+@keyframes toLeft {
+  0%{
+    transform: translateX(100%);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+
+@media (max-width:600px) {
+  .header{
+      visibility: hidden;
+  }
+
+  /* corve imag responsive */
+  .Main-round{
+    /* background-color: aqua; */
+    height: 60vh;
+    width: 100%;
+    background-position: center;
+    object-fit: cover;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    position: relative;
+  }
+  .Main-round-1{
+    /* background-color: white; */
+    height: 30vh;
+    width: 65%;
+    border-radius: 50%;
+    position: absolute;
+    right: 0%;
+    bottom: 20%;
+     }
+     .text-2{
+      font-family: 'Prata, sans-serif';
+      font-weight: 400;
+      font-size: 20px;
+      color: #4F4D4D;
+    }
+
+
+    .Teacher-img1{
+      position: absolute;
+      left: 5%;
+      bottom: 0%;
+       height: 30vh;
+       width: 45%;
+       /* background-color: aqua; */
+       
+      border-radius: 200px;
+      overflow: hidden;
+    
+    
+    }
+    .footer{
+      /* background-image: url("https://optim.tildacdn.one/tild6333-3430-4530-b435-323266376631/-/format/webp/DSC01781.jpg"); */
+      background-position: right;
+      background-repeat: no-repeat;
+      background-size: cover;
+    
+        
+        
+    }
+
 }
